@@ -1,0 +1,13 @@
+services:
+  portal:
+    build: .
+    container_name: portal-inclusao-digital
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    # As chaves de API ficam no arquivo .env (não versionado).
+    # Se o arquivo não existir, o site funciona mesmo assim.
+    env_file:
+      - .env
