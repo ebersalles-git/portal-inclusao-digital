@@ -30,6 +30,16 @@ class EntradaVerificacao(BaseModel):
     texto: str = ""
 
 
+@app.middleware("http")
+async def sem_cache_velho(request, call_next):
+    """Faz o navegador sempre conferir HTML/CSS/JS novos após cada deploy."""
+    resposta = await call_next(request)
+    caminho = request.url.path
+    if caminho == "/" or caminho.endswith((".html", ".css", ".js")):
+        resposta.headers["Cache-Control"] = "no-cache"
+    return resposta
+
+
 @app.get("/api/saude")
 async def saude():
     """Checagem simples de saúde para o painel/monitoramento."""
