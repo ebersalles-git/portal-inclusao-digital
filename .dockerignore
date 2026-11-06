@@ -8,3 +8,6 @@ venv/
 *.jpeg
 *.jpg
 README.md
+tests/
+.playwright-mcp/
+.pytest_cache/

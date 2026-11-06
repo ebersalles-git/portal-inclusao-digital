@@ -3,76 +3,124 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portal Inclusão Digital para Idosos</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🌐</text></svg>" />
-  <meta name="description" content="Acesso fácil e seguro aos serviços oficiais do governo, com passo a passo em letras grandes, leitura em voz e verificador de notícias falsas." />
+  <title>Portal Inclusão Digital</title>
+  <meta name="description" content="Serviços do governo com passo a passo ilustrado, letras grandes, leitura em voz e verificador de notícias falsas. Ação social da Igreja Cristã Maranata." />
+  <meta name="theme-color" content="#10224a" />
+  <link rel="icon" type="image/svg+xml" href="/img/marca.svg" />
+  <meta property="og:title" content="Portal Inclusão Digital" />
+  <meta property="og:description" content="Use os serviços do governo com calma e segurança." />
+  <meta property="og:image" content="/img/marca.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@600;700&display=swap" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
   <a class="pular" href="#principal">Pular para o conteúdo</a>
 
-  <!-- Barra de acessibilidade -->
   <div class="barra-acessibilidade" role="region" aria-label="Ferramentas de acessibilidade">
     <div class="conteudo">
-      <span class="rotulo">Acessibilidade:</span>
-      <button class="btn-acess" id="fonte-mais" aria-label="Aumentar o tamanho da letra">A+ <span aria-hidden="true">Aumentar</span></button>
-      <button class="btn-acess" id="fonte-menos" aria-label="Diminuir o tamanho da letra">A– <span aria-hidden="true">Diminuir</span></button>
-      <button class="btn-acess" id="alto-contraste" aria-pressed="false">◐ Alto Contraste</button>
-      <button class="btn-acess" id="ouvir-pagina" aria-pressed="false">🔊 <span class="txt">Ouvir Página</span></button>
+      <span class="rotulo">Ajuste a tela do seu jeito:</span>
+      <button class="btn-acess" id="fonte-mais" aria-label="Aumentar o tamanho da letra">A+ <span class="txt-longo" aria-hidden="true">Letra maior</span></button>
+      <button class="btn-acess" id="fonte-menos" aria-label="Diminuir o tamanho da letra">A– <span class="txt-longo" aria-hidden="true">Letra menor</span></button>
+      <button class="btn-acess" id="alto-contraste" aria-pressed="false">◐ <span class="txt-longo">Alto contraste</span></button>
+      <button class="btn-acess" id="ouvir-pagina" aria-pressed="false">🔊 <span class="txt">Ouvir página</span></button>
     </div>
   </div>
 
-  <!-- Faixa antigolpe -->
-  <div class="faixa-antigolpe" role="alert">
+  <div class="faixa-antigolpe" role="note">
     <div class="conteudo">
       <span class="icone" aria-hidden="true">🛡️</span>
-      <span><strong>Atenção:</strong> o governo oficial termina em <strong>.gov.br</strong> e <strong>NUNCA</strong> pede senhas por mensagens ou ligações.</span>
+      <span><strong>Atenção:</strong> o governo oficial termina em <strong>.gov.br</strong> e <strong>nunca</strong> pede senhas por mensagens ou ligações.</span>
     </div>
   </div>
 
-  <!-- Cabeçalho -->
   <header class="cabecalho">
     <div class="conteudo">
-      <div class="marca">
-        <div class="logo" aria-hidden="true">🌐</div>
-        <div>
-          <h1>Portal Inclusão Digital</h1>
-          <p>Acesso fácil e seguro aos serviços do governo</p>
-        </div>
-      </div>
+      <a class="marca" href="/" aria-label="Portal Inclusão Digital — página inicial">
+        <img src="/img/marca.svg" alt="" width="60" height="60" />
+        <span><strong>Portal Inclusão Digital</strong><span>Tecnologia com calma e segurança</span></span>
+      </a>
       <nav class="nav-topo" aria-label="Menu principal">
         <a href="/" aria-current="page">Início</a>
-        <a href="/projeto.html">O Projeto Social</a>
+        <a href="#verificador">Verificar notícia</a>
+        <a href="/projeto.html">O projeto social</a>
       </nav>
     </div>
   </header>
 
   <main id="principal">
-    <!-- Serviços -->
-    <section class="secao" aria-labelledby="t-servicos">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="t-hero">
       <div class="conteudo">
-        <h2 id="t-servicos">1. Acesse os serviços oficiais</h2>
-        <p class="intro">Toque no botão colorido para abrir o site oficial, ou em <strong>"Ver o passo a passo"</strong> para aprender com calma, em letras grandes, antes de entrar.</p>
+        <div>
+          <h1 id="t-hero">Use os serviços do governo sem medo de errar.</h1>
+          <p class="sub">Escolha o serviço e veja, tela por tela, onde tocar. O círculo amarelo mostra o lugar certo.</p>
+          <div class="hero-acoes">
+            <a class="botao botao-ouro" href="#servicos">Escolher um serviço</a>
+            <a class="botao botao-claro" href="#verificador">Verificar uma mensagem</a>
+          </div>
+        </div>
+        <div class="hero-figura" aria-hidden="true">
+          <div class="cel" style="--cor:#1351b4">
+            <div class="c-topo">gov.br</div>
+            <div class="c-icone">📱</div>
+            <div class="c-texto">Bem-vindo!</div>
+            <div class="c-campo">CPF</div>
+            <div class="c-botao alvo">Entrar com gov.br</div>
+          </div>
+          <span class="hero-legenda"><span class="ponto"></span>Toque aqui</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços do governo -->
+    <section class="secao" id="servicos" aria-labelledby="t-servicos">
+      <div class="conteudo">
+        <div class="secao-cabeca">
+          <h2 id="t-servicos">Serviços do governo</h2>
+          <p>Toque em <strong>"Passo a passo"</strong> para aprender com calma antes de entrar. Quando estiver pronto, toque em <strong>"Site oficial"</strong>.</p>
+        </div>
         <div class="grade-servicos" id="grade-servicos"><!-- preenchido pelo JS --></div>
       </div>
     </section>
 
-    <!-- Verificador -->
-    <section class="secao" aria-labelledby="t-verif">
+    <!-- Dia a dia -->
+    <section class="secao secao-dia" aria-labelledby="t-dia">
       <div class="conteudo">
-        <h2 id="t-verif">2. Verificador de Notícias</h2>
-        <p class="intro">Recebeu uma mensagem estranha no WhatsApp? Cole aqui que a gente confere se é verdade ou se é boato — e você ainda pode avisar quem mandou, com jeitinho.</p>
-        <div class="verificador-caixa">
-          <form id="form-verificador">
-            <label for="entrada">Cole aqui o link ou a mensagem que você recebeu no WhatsApp:</label>
-            <textarea id="entrada" name="entrada" placeholder="Exemplo: 'Clique aqui para liberar seu benefício do governo...'"></textarea>
-            <div class="verificador-acoes">
-              <button type="submit" class="botao botao-principal" style="--cor:var(--vinho)">🔎 Verificar Notícia</button>
-            </div>
-          </form>
-          <p class="carregando" id="carregando" role="status">⏳ Verificando com calma, um instante...</p>
-          <div class="resultado" id="resultado" role="status" aria-live="polite"></div>
+        <div class="secao-cabeca">
+          <h2 id="t-dia">Para o dia a dia</h2>
+          <p>Banco no celular, telefones de emergência e jogos para exercitar a mente.</p>
+        </div>
+        <div class="grade-dia" id="grade-dia"><!-- preenchido pelo JS --></div>
+      </div>
+    </section>
+
+    <!-- Verificador -->
+    <section class="secao secao-verif" id="verificador" aria-labelledby="t-verif">
+      <div class="conteudo">
+        <div class="secao-cabeca">
+          <h2 id="t-verif">Verificador de notícias</h2>
+          <p>Recebeu uma mensagem ou um link estranho no WhatsApp? Cole aqui antes de repassar.</p>
+        </div>
+        <div class="verif-grade">
+          <div class="verificador-caixa">
+            <form id="form-verificador">
+              <label for="entrada">Cole aqui o link ou a mensagem que você recebeu:</label>
+              <textarea id="entrada" name="entrada" placeholder="Exemplo: Seu benefício será bloqueado hoje! Clique no link para liberar..."></textarea>
+              <div class="verificador-acoes">
+                <button type="submit" class="botao botao-principal" id="btn-verificar" style="--cor:var(--vinho)">🔎 Verificar notícia</button>
+                <button type="button" class="botao botao-secundario" id="btn-limpar" style="--cor:var(--marinho)">↺ Nova consulta</button>
+              </div>
+            </form>
+            <p class="carregando" id="carregando" role="status">Conferindo com calma, só um instante…</p>
+            <div class="resultado" id="resultado" role="status" aria-live="polite"></div>
+          </div>
+          <ul class="verif-dicas" aria-label="Como o verificador confere">
+            <li><span aria-hidden="true">🏛️</span><span>Diz se o link é de um <strong>site oficial</strong> ou de um jornal conhecido.</span></li>
+            <li><span aria-hidden="true">🚩</span><span>Avisa quando a mensagem tem <strong>cara de golpe</strong>: pede senha, Pix ou tem pressa demais.</span></li>
+            <li><span aria-hidden="true">📰</span><span>Procura se <strong>agências de checagem</strong> já analisaram o assunto.</span></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -80,21 +128,24 @@
     <!-- FAQ -->
     <section class="secao" aria-labelledby="t-faq">
       <div class="conteudo">
-        <h2 id="t-faq">3. Perguntas Frequentes</h2>
-        <p class="intro">As dúvidas mais comuns, respondidas em letras grandes. Toque na pergunta para abrir a resposta.</p>
+        <div class="secao-cabeca">
+          <h2 id="t-faq">Perguntas frequentes</h2>
+          <p>Toque na pergunta para ver a resposta.</p>
+        </div>
         <div class="faq-lista" id="faq-lista"><!-- preenchido pelo JS --></div>
       </div>
     </section>
   </main>
 
-  <!-- Modal de tutorial -->
+  <!-- Janela do passo a passo / emergência / jogos -->
   <div class="modal" id="modal-tutorial" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
     <div class="modal-conteudo">
       <div class="modal-cabecalho" id="modal-cabecalho">
+        <div class="logo-modal" id="modal-logo" aria-hidden="true"></div>
         <h2 id="modal-titulo">Passo a passo</h2>
-        <button class="fechar-modal" id="fechar-modal" aria-label="Fechar o passo a passo">✕</button>
+        <button class="fechar-modal" id="fechar-modal">✕ Fechar</button>
       </div>
-      <div class="modal-corpo" id="modal-corpo"><!-- preenchido pelo JS --></div>
+      <div class="modal-corpo" id="modal-corpo"></div>
     </div>
   </div>
 
@@ -102,42 +153,28 @@
     <div class="conteudo">
       <div>
         <p><strong>Portal Inclusão Digital</strong></p>
-        <p>Ação social da Igreja Cristã Maranata.</p>
-        <p>Projeto acadêmico da Faculdade de Direito de Vitória (FDV).</p>
+        <p>Ação social da Igreja Cristã Maranata, com a Faculdade de Direito de Vitória (FDV).</p>
+        <div class="selos">
+          <img src="/img/icm.png" alt="Igreja Cristã Maranata" />
+          <img src="/img/fdv.jpg" alt="Faculdade de Direito de Vitória (FDV)" style="padding:0" />
+        </div>
       </div>
       <div>
-        <p><strong>Lembre-se sempre:</strong></p>
-        <p>🛡️ Site oficial termina em <strong>.gov.br</strong></p>
-        <p>🔒 Ninguém oficial pede sua senha.</p>
-        <p><a href="/projeto.html">Conheça o projeto social →</a></p>
+        <p><strong>Lembre-se sempre</strong></p>
+        <p>🛡️ Site oficial termina em .gov.br</p>
+        <p>🔒 Ninguém oficial pede sua senha</p>
+        <p>📞 Na dúvida, ligue para o órgão</p>
+      </div>
+      <div>
+        <p><strong>Emergência</strong></p>
+        <p><a href="tel:192">192 — SAMU</a></p>
+        <p><a href="tel:190">190 — Polícia</a></p>
+        <p><a href="/projeto.html">Conheça o projeto social</a></p>
       </div>
     </div>
   </footer>
 
   <script src="/js/tutoriais.js"></script>
-  <script>
-    /* monta os cartões de serviço a partir de SERVICOS */
-    (function () {
-      var grade = document.getElementById("grade-servicos");
-      if (!grade || !window.SERVICOS) return;
-      var ordem = ["inss", "govbr", "cidadao", "fgts"];
-      ordem.forEach(function (id) {
-        var s = window.SERVICOS[id];
-        var card = document.createElement("div");
-        card.className = "cartao-servico";
-        card.style.setProperty("--cor", s.cor);
-        card.innerHTML =
-          '<div class="icone-serv" aria-hidden="true">' + s.sigla + '</div>' +
-          '<h3>' + s.nome + '</h3>' +
-          '<p class="desc">' + s.descricao + '</p>' +
-          '<a class="botao botao-principal" href="' + s.site + '" target="_blank" rel="noopener noreferrer">' +
-            'Abrir site oficial <span class="seta" aria-hidden="true">↗</span></a>' +
-          '<button class="botao botao-secundario" type="button" data-tutorial="' + id + '">' +
-            '📖 Ver o passo a passo</button>';
-        grade.appendChild(card);
-      });
-    })();
-  </script>
   <script src="/js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Portal Inclusão Digital">
+  <!-- Marca: um celular com um coração na tela e o "dedo" amarelo tocando —
+       o mesmo círculo amarelo que indica onde tocar nos passo a passo. -->
+  <rect width="64" height="64" rx="16" fill="#10224a"/>
+  <rect x="19" y="9" width="26" height="46" rx="6" fill="#ffffff"/>
+  <rect x="22" y="15" width="20" height="32" rx="2" fill="#eef2f8"/>
+  <rect x="28" y="11.5" width="8" height="1.6" rx=".8" fill="#c9d2e3"/>
+  <path d="M32 40.5c-.4 0-.8-.15-1.1-.42C26.4 36.2 24 33.9 24 30.6c0-2.6 2-4.6 4.5-4.6 1.4 0 2.6.66 3.5 1.7.9-1.04 2.1-1.7 3.5-1.7 2.5 0 4.5 2 4.5 4.6 0 3.3-2.4 5.6-6.9 9.48-.3.27-.7.42-1.1.42z" fill="#8c1d3e"/>
+  <circle cx="44" cy="47" r="7.5" fill="#f4b731" stroke="#10224a" stroke-width="2.5"/>
+</svg>

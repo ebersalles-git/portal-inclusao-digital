@@ -10,13 +10,40 @@ para os sites oficiais (`.gov.br` e `es.gov.br`), onde o login é feito com
 segurança. Nenhuma senha é digitada aqui.
 
 ## O que tem no site
-- **Barra de acessibilidade:** aumentar/diminuir fonte, alto contraste e "ouvir a página" (voz).
+- **Barra de acessibilidade:** letra maior/menor, alto contraste e "ouvir página" (voz).
 - **Faixa antigolpe** no topo.
-- **4 serviços** (INSS, Gov.br, Acesso Cidadão, FGTS) com botão para o site oficial
-  e um **passo a passo** (entrar, criar conta, depois de entrar, esqueci a senha).
-- **Verificador de Notícias** (bot antifake) com botão "copiar resposta para o WhatsApp".
+- **Serviços do governo** com logotipo oficial e passo a passo ilustrado (desenho do
+  celular com o "dedo amarelo" mostrando onde tocar): Meu INSS, Gov.br, Acesso Cidadão,
+  Carteira Digital de Trânsito (app CNH do Brasil), Título de Eleitor Digital (e-Título)
+  e Meu SUS Digital.
+- **Para o dia a dia:** dicas de internet banking e Pix, números de emergência (toque
+  para ligar) e jogos (memória e palavra embaralhada).
+- **Verificador de Notícias** com botão "Nova consulta" e "copiar resposta para o WhatsApp".
 - **FAQ** com as 6 dúvidas mais comuns.
-- **Página do Projeto Social** com créditos acadêmicos e espaços para fotos e o logo da FDV.
+- **Página do Projeto Social:** ação da Igreja Cristã Maranata (com logo e vídeo),
+  responsáveis, foto do grupo, galeria de ações e créditos acadêmicos com o logo da FDV.
+
+## Onde trocar conteúdo
+| O quê | Onde |
+|---|---|
+| Passo a passo, serviços, emergência, FAQ | `static/js/tutoriais.js` |
+| Foto do grupo | `static/img/fotos/grupo.jpg` |
+| Fotos das ações anteriores | `static/img/fotos/acao-1.jpg` … `acao-6.jpg` (legendas em `static/projeto.html`, lista `GALERIA`) |
+| Responsáveis e link do vídeo | `static/projeto.html` |
+| Logotipos | `static/img/` e `static/img/logos/` |
+
+Enquanto uma foto não existir, o site mostra um espaço reservado com o nome do arquivo.
+
+## Como o verificador decide
+1. Checagem de agência **sobre o mesmo assunto** dizendo "falso" → **boato** (vermelho)
+2. Sinais de golpe (pede senha/Pix, pressa, link encurtado, site imitando o governo) → **cara de golpe** (vermelho)
+3. Link de site oficial (.gov.br, .jus.br…) → **site oficial** (verde)
+4. Checagem relacionada dizendo "verdadeiro" → **verdadeiro** (verde)
+5. Link de jornal conhecido ou agência de checagem → **fonte conhecida** (verde)
+6. Nada encontrado → **ainda não verificado, não repasse** (amarelo)
+
+Os passos 2, 3, 5 e 6 funcionam **sem nenhuma chave de API**.
+Testes: `.venv\Scripts\pip install pytest` e depois `.venv\Scripts\python -m pytest tests`.
 
 ## Como rodar no seu computador (teste)
 ```bash
@@ -42,8 +69,9 @@ docker-compose.yml
 ```
 
 ## Verificador de Notícias — chaves de API (opcionais)
-O site **funciona sem nenhuma chave**: nesse caso o verificador mostra uma
-resposta segura ("não foi verificado, por segurança não repasse").
+O site **funciona sem nenhuma chave**: o verificador já reconhece sites oficiais,
+jornais conhecidos e sinais de golpe. As chaves acrescentam a consulta às agências
+de checagem e a redação da resposta por IA.
 
 Para ativar a verificação de verdade, copie `.env.example` para `.env` e preencha:
 - `GOOGLE_FACTCHECK_API_KEY` — da Google Fact Check Tools API.

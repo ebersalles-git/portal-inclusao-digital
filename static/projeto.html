@@ -4,8 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>O Projeto Social — Portal Inclusão Digital</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🤝</text></svg>" />
   <meta name="description" content="Ação social da Igreja Cristã Maranata para inclusão digital de idosos — projeto interdisciplinar da Faculdade de Direito de Vitória (FDV)." />
+  <meta name="theme-color" content="#10224a" />
+  <link rel="icon" type="image/svg+xml" href="/img/marca.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@600;700&display=swap" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
@@ -13,79 +17,123 @@
 
   <div class="barra-acessibilidade" role="region" aria-label="Ferramentas de acessibilidade">
     <div class="conteudo">
-      <span class="rotulo">Acessibilidade:</span>
-      <button class="btn-acess" id="fonte-mais" aria-label="Aumentar o tamanho da letra">A+ <span aria-hidden="true">Aumentar</span></button>
-      <button class="btn-acess" id="fonte-menos" aria-label="Diminuir o tamanho da letra">A– <span aria-hidden="true">Diminuir</span></button>
-      <button class="btn-acess" id="alto-contraste" aria-pressed="false">◐ Alto Contraste</button>
-      <button class="btn-acess" id="ouvir-pagina" aria-pressed="false">🔊 <span class="txt">Ouvir Página</span></button>
+      <span class="rotulo">Ajuste a tela do seu jeito:</span>
+      <button class="btn-acess" id="fonte-mais" aria-label="Aumentar o tamanho da letra">A+ <span class="txt-longo" aria-hidden="true">Letra maior</span></button>
+      <button class="btn-acess" id="fonte-menos" aria-label="Diminuir o tamanho da letra">A– <span class="txt-longo" aria-hidden="true">Letra menor</span></button>
+      <button class="btn-acess" id="alto-contraste" aria-pressed="false">◐ <span class="txt-longo">Alto contraste</span></button>
+      <button class="btn-acess" id="ouvir-pagina" aria-pressed="false">🔊 <span class="txt">Ouvir página</span></button>
     </div>
   </div>
 
-  <div class="faixa-antigolpe" role="alert">
+  <div class="faixa-antigolpe" role="note">
     <div class="conteudo">
       <span class="icone" aria-hidden="true">🛡️</span>
-      <span><strong>Atenção:</strong> o governo oficial termina em <strong>.gov.br</strong> e <strong>NUNCA</strong> pede senhas por mensagens ou ligações.</span>
+      <span><strong>Atenção:</strong> o governo oficial termina em <strong>.gov.br</strong> e <strong>nunca</strong> pede senhas por mensagens ou ligações.</span>
     </div>
   </div>
 
   <header class="cabecalho">
     <div class="conteudo">
-      <div class="marca">
-        <div class="logo" aria-hidden="true">🤝</div>
-        <div>
-          <h1>O Projeto Social</h1>
-          <p>Inclusão digital de idosos com dignidade</p>
-        </div>
-      </div>
+      <a class="marca" href="/" aria-label="Portal Inclusão Digital — página inicial">
+        <img src="/img/marca.svg" alt="" width="60" height="60" />
+        <span><strong>Portal Inclusão Digital</strong><span>Tecnologia com calma e segurança</span></span>
+      </a>
       <nav class="nav-topo" aria-label="Menu principal">
         <a href="/">Início</a>
-        <a href="/projeto.html" aria-current="page">O Projeto Social</a>
+        <a href="/#verificador">Verificar notícia</a>
+        <a href="/projeto.html" aria-current="page">O projeto social</a>
       </nav>
     </div>
   </header>
 
   <main id="principal">
-    <section class="secao" aria-labelledby="t-acao">
+    <section class="hero-projeto" aria-labelledby="t-proj">
       <div class="conteudo">
-        <h2 id="t-acao">Ação Social da Igreja Cristã Maranata</h2>
-        <div class="bloco">
-          <p class="intro">Este portal nasceu de uma ação social da <strong>Igreja Cristã Maranata</strong> voltada à assistência digital da comunidade. O objetivo é simples e importante: ajudar pessoas idosas a usarem, com <strong>autonomia e segurança</strong>, os serviços oficiais do governo — sem medo e sem cair em golpes.</p>
-          <p>Nos encontros, voluntários acompanham cada pessoa no seu ritmo, com letras grandes, passo a passo e muita paciência. A tecnologia vira uma ponte, não uma barreira.</p>
-          <p style="font-weight:700">Liderança do projeto: <em>espaço reservado para os nomes dos líderes responsáveis pela ação.</em></p>
-        </div>
+        <h1 id="t-proj">Ninguém deve ficar de fora do mundo digital.</h1>
+        <p>Este portal nasceu do encontro entre uma ação social da Igreja Cristã Maranata e um projeto acadêmico da Faculdade de Direito de Vitória. O objetivo é ajudar pessoas idosas a usar os serviços do governo com autonomia e segurança.</p>
+      </div>
+    </section>
 
-        <h3 style="margin-top:34px">Fotos das nossas ações</h3>
-        <p>Espaço reservado para registrar os encontros e oficinas com a comunidade.</p>
-        <div class="galeria-fotos" aria-label="Galeria de fotos das ações sociais">
-          <div class="foto-vaga">📷<br>Foto da ação social 1</div>
-          <div class="foto-vaga">📷<br>Foto da ação social 2</div>
-          <div class="foto-vaga">📷<br>Foto da ação social 3</div>
-          <div class="foto-vaga">📷<br>Foto da ação social 4</div>
+    <!-- Igreja (vinho) -->
+    <section class="secao secao-igreja" aria-labelledby="t-acao">
+      <div class="conteudo">
+        <div class="igreja-titulo">
+          <div class="placa-logo"><img src="/img/icm.png" alt="Logotipo da Igreja Cristã Maranata" /></div>
+          <h2 id="t-acao">Ação Social da Igreja Cristã Maranata</h2>
+        </div>
+        <div class="igreja-grade">
+          <div>
+            <p>Nos encontros de assistência digital, voluntários sentam ao lado de cada pessoa e ensinam no ritmo dela: criar a conta gov.br, ver o extrato do INSS, mostrar a carteira de vacinação no celular, reconhecer um golpe.</p>
+            <p>Com letras grandes, passo a passo e muita paciência, a tecnologia deixa de ser uma barreira e vira uma ponte para direitos que já pertencem a cada cidadão.</p>
+          </div>
+          <div>
+            <div class="cartao-claro">
+              <h3>Responsáveis pela ação social</h3>
+              <ul class="responsaveis">
+                <li><span>Luiz Fernando Gaspar Pitta<small>Responsável geral</small></span></li>
+                <li><span>Marcos Rodrigues Saúde<small>Equipe Digital</small></span></li>
+              </ul>
+            </div>
+            <div class="cartao-claro">
+              <a class="video-link" id="video-igreja" href="https://www.folhavitoria.com.br/videos/maranata-maos-a-obra/" target="_blank" rel="noopener noreferrer">
+                <span class="play" aria-hidden="true"></span>
+                <span><strong>Assista: Maranata Mãos à Obra</strong><span>Vídeos sobre as ações sociais da igreja (abre em outra aba)</span></span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="secao" aria-labelledby="t-creditos">
+    <!-- Fotos -->
+    <section class="secao" aria-labelledby="t-fotos">
       <div class="conteudo">
-        <h2 id="t-creditos">Créditos Acadêmicos</h2>
-        <div class="bloco">
-          <p><strong>Projeto interdisciplinar</strong> da disciplina de <strong>Sociologia</strong> — Faculdade de Direito de Vitória (FDV).</p>
-          <p><strong>Tema:</strong> Inclusão digital de idosos em situação de vulnerabilidade socioeconômica.</p>
-          <p><strong>Professor Orientador:</strong> Antônio Leal.</p>
+        <div class="secao-cabeca">
+          <h2 id="t-fotos">Quem faz acontecer</h2>
+          <p>A equipe do projeto e alguns momentos das nossas ações com a comunidade.</p>
+        </div>
 
-          <h3 style="margin-top:22px">Alunas participantes</h3>
-          <ul class="lista-alunas">
-            <li>Mariana Salles</li>
-            <li>Isabela Donatti</li>
-            <li>Giovana Israel</li>
-            <li>Ana Luiza Zanelato</li>
-            <li>Isabela Rosário</li>
-            <li>Manuela Fiorotti</li>
-          </ul>
-
-          <div class="logo-vaga" role="img" aria-label="Espaço reservado para o logotipo da FDV">
-            Espaço reservado<br>para o logotipo da FDV
+        <!-- Para trocar as fotos: coloque os arquivos em static/img/fotos/
+             com estes nomes: grupo.jpg, acao-1.jpg ... acao-6.jpg -->
+        <figure class="foto-grupo">
+          <div class="foto-grupo-img">
+            <img src="/img/fotos/grupo.jpg" alt="As seis alunas da FDV que criaram o projeto, sorrindo em frente ao prédio da faculdade" onerror="this.parentNode.parentNode.classList.add('vazia')" />
+            <div class="vaga"><span>📷 Foto do grupo<br><small>arquivo: img/fotos/grupo.jpg</small></span></div>
           </div>
+          <figcaption>
+            <strong>As alunas da FDV que criaram este portal</strong>
+            <span>Mariana Salles, Isabela Donatti, Giovana Israel, Ana Luiza Zanelato, Isabela Rosário e Manuela Fiorotti — com orientação do professor Antônio Leal e o apoio da Ação Social da Igreja Cristã Maranata.</span>
+          </figcaption>
+        </figure>
+
+        <h3 style="margin-top:48px">Ações sociais anteriores</h3>
+        <div class="galeria" id="galeria"><!-- preenchido pelo JS --></div>
+      </div>
+    </section>
+
+    <!-- Créditos acadêmicos -->
+    <section class="secao" style="padding-top:0" aria-labelledby="t-creditos">
+      <div class="conteudo">
+        <div class="secao-cabeca">
+          <h2 id="t-creditos">Créditos acadêmicos</h2>
+        </div>
+        <div class="creditos">
+          <img class="logo-fdv" src="/img/fdv.jpg" alt="Logotipo da Faculdade de Direito de Vitória (FDV)" />
+          <dl>
+            <div><dt>Projeto</dt><dd>Projeto interdisciplinar da disciplina de Sociologia — Faculdade de Direito de Vitória (FDV).</dd></div>
+            <div><dt>Tema</dt><dd>Inclusão digital de idosos em situação de vulnerabilidade socioeconômica.</dd></div>
+            <div><dt>Professor orientador</dt><dd>Antônio Leal</dd></div>
+            <div><dt>Alunas participantes</dt><dd>
+              <ul class="lista-alunas">
+                <li>Mariana Salles</li>
+                <li>Isabela Donatti</li>
+                <li>Giovana Israel</li>
+                <li>Ana Luiza Zanelato</li>
+                <li>Isabela Rosário</li>
+                <li>Manuela Fiorotti</li>
+              </ul>
+            </dd></div>
+          </dl>
         </div>
       </div>
     </section>
@@ -95,15 +143,32 @@
     <div class="conteudo">
       <div>
         <p><strong>Portal Inclusão Digital</strong></p>
-        <p>Ação social da Igreja Cristã Maranata.</p>
-        <p>Projeto acadêmico da FDV — Sociologia.</p>
+        <p>Ação social da Igreja Cristã Maranata, com a Faculdade de Direito de Vitória (FDV).</p>
+        <div class="selos">
+          <img src="/img/icm.png" alt="Igreja Cristã Maranata" />
+          <img src="/img/fdv.jpg" alt="Faculdade de Direito de Vitória (FDV)" style="padding:0" />
+        </div>
       </div>
       <div>
-        <p><a href="/">← Voltar ao início</a></p>
+        <p><strong>Lembre-se sempre</strong></p>
+        <p>🛡️ Site oficial termina em .gov.br</p>
+        <p>🔒 Ninguém oficial pede sua senha</p>
+      </div>
+      <div>
+        <p><a href="/">Voltar ao início</a></p>
       </div>
     </div>
   </footer>
 
+  <script>
+    /* Galeria de ações anteriores: edite a lista para trocar fotos e legendas. */
+    window.GALERIA = [
+      { arquivo: "acao-1.jpg", legenda: "Comunidade reunida na tenda da Ação Social, com bazar de doações" },
+      { arquivo: "acao-2.jpg", legenda: "Atendimento e orientação, sentados lado a lado com cada pessoa" },
+      { arquivo: "acao-3.jpg", legenda: "Voluntários de colete: \"Ação Social — Posso te ajudar\"" },
+      /* Para mais fotos: coloque acao-4.jpg em static/img/fotos/ e adicione uma linha aqui. */
+    ];
+  </script>
   <script src="/js/app.js"></script>
 </body>
 </html>
