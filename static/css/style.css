@@ -274,6 +274,7 @@ textarea#entrada:focus { border-color: var(--marinho-3); }
 .rodape p { margin: 6px 0; }
 .rodape .selos { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 12px; }
 .rodape .selos img { height: 54px; width: auto; border-radius: 10px; background: #fff; padding: 6px 10px; }
+.rodape .selos img.selo-icm { width: 130px; height: 54px; padding: 0; background: none; object-fit: cover; object-position: center 56%; }
 
 /* ---------- Modal ---------- */
 .modal {
@@ -399,8 +400,8 @@ textarea#entrada:focus { border-color: var(--marinho-3); }
 .secao-igreja { background: var(--vinho); color: #fff; }
 .secao-igreja h2, .secao-igreja h3 { color: #fff; }
 .igreja-titulo { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-bottom: 26px; }
-.igreja-titulo .placa-logo { background: #fff; border-radius: var(--raio-m); padding: 12px 18px; flex: none; }
-.igreja-titulo .placa-logo img { height: 56px; width: auto; }
+.igreja-titulo .placa-logo { flex: none; line-height: 0; }
+.igreja-titulo .placa-logo img { width: 240px; height: 100px; object-fit: cover; object-position: center 52%; border-radius: var(--raio-m); border: 3px solid rgba(255,255,255,.85); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
 .igreja-grade { display: grid; gap: 30px; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: start; }
 .igreja-grade p { color: #f6e4ea; font-size: calc(var(--base) * 1.05); }
 .cartao-claro { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.25); border-radius: var(--raio-g); padding: 22px; }
